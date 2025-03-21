@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Specifies the document type as HTML5 -->
+    <meta charset="UTF-8">
+    
+    <!-- Title of the page (appears in the browser tab) -->
+    <title>Interactive Image Viewer</title>
+
+    <!-- Sets the favicon (small icon in browser tab) -->
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+    
+    <!-- Links external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Analytics Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B1QSW29N2C"></script>
+    <script>
+        // Initializes the Google Analytics data layer
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+       
+        // Sends the configuration command to Google Analytics
+        gtag('js', new Date());
+        gtag('config', 'G-B1QSW29N2C');
+    </script>
+</head>
+<body>
+
+    <!-- Pop-up Window -->
+    <div id="popup" class="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <img id="popup-img">
+        <p id="popup-text" class="cap"></p>
+    </div>
+
+    <!-- Main Interactive Container where images will be displayed -->
+    <div class="interactive-container full-viewport-height">
+        <!-- Dynamic images will be injected here by JavaScript -->
+    </div>
+
+    <div class="toolbar">
+        <label for="color-filter">Filter by Color:</label>
+        <select id="color-filter">
+          <option value="all">All</option>
+          <option value="red">Red</option>
+          <option value="yellow">Yellow</option>
+          <option value="pink">Pink</option>
+          <option value="black">Black</option>
+          <option value="white">White</option>
+          <option value="silver">Silver</option>
+          <option value="gray">Gray</option>
+          <option value="orange">Orange</option>
+          <!-- Add more options based on your data -->
+        </select>
+    </div>
+      
+
+
+    <!-- Link to the external JavaScript file that handles fetching and displaying Google Sheets data -->
+    <script src="script.js"></script>
+
+</body>
+</html>
